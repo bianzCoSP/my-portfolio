@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ContentSection from "@/components/about-page";
 
 export const metadata: Metadata = {
 	title: "About Me",
@@ -10,14 +11,10 @@ export const metadata: Metadata = {
 	},
 };
 
-const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
-
 export default async function Home() {
-	await delay(2000);
-
 	return (
 		<div>
-			<h1>Hello ABOUT!</h1>
+			<ContentSection />
 		</div>
 	);
 }
