@@ -20,6 +20,7 @@ export default function HeroSection() {
 							alt="hero background"
 							width={2198}
 							height={1685}
+							priority
 							className="h-full w-full object-cover object-top"
 						/>
 					</div>
