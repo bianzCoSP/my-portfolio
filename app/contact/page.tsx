@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Contact from "@/components/contact-page";
 
 export const metadata: Metadata = {
 	title: "Contact",
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
 export default function Home() {
 	return (
 		<div>
-			<h1>Hello CONTACT!</h1>
+			<Contact />
 		</div>
 	);
 }
