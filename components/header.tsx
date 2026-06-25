@@ -5,6 +5,7 @@ import React from "react";
 import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "./toggle-theme";
 
 const menuItems = [
 	{ name: "About", href: "/about" },
@@ -25,7 +26,7 @@ export const HeroHeader = () => {
 	}, []);
 
 	return (
-		<header>
+		<header className="sticky top-0 z-50">
 			<nav
 				data-state={menuState && "active"}
 				className={cn(
@@ -86,34 +87,7 @@ export const HeroHeader = () => {
 								</ul>
 							</div>
 							<div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-								<Button
-									variant="ghost"
-									size="sm"
-									className={cn(isScrolled && "lg:hidden")}
-									asChild
-								>
-									<Link href="#">
-										<span>Login</span>
-									</Link>
-								</Button>
-								<Button
-									size="sm"
-									className={cn(isScrolled && "lg:hidden")}
-									asChild
-								>
-									<Link href="#">
-										<span>Sign Up</span>
-									</Link>
-								</Button>
-								<Button
-									size="sm"
-									className={cn(isScrolled ? "lg:inline-flex" : "hidden")}
-									asChild
-								>
-									<Link href="#">
-										<span>Get Started</span>
-									</Link>
-								</Button>
+								<ThemeToggle />
 							</div>
 						</div>
 					</div>

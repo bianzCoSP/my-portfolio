@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+import { ThemeProvider } from "next-themes";
+
 import { HeroHeader } from "@/components/header";
 
 import { cn } from "@/lib/utils";
@@ -39,6 +41,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html
+			suppressHydrationWarning
 			lang="en"
 			className={cn(
 				"h-full",
@@ -48,10 +51,10 @@ export default function RootLayout({
 			)}
 		>
 			<body className="min-h-full flex flex-col bg-background text-foreground font-(family-name:--font-geist-sans)">
-				<div className="sticky top-0 z-50">
+				<ThemeProvider attribute="class" enableSystem defaultTheme="system">
 					<HeroHeader />
-				</div>
-				<main className="flex-1 flex-col">{children}</main>
+					<main className="flex-1 flex-col">{children}</main>
+				</ThemeProvider>
 			</body>
 		</html>
 	);
