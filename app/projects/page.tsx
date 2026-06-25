@@ -1,7 +1,9 @@
+import Features from "@/components/project-board";
+
 export default function Home() {
 	return (
 		<div>
-			<h1>PROJECT CARD</h1>
+			<Features />
 		</div>
 	);
 }
