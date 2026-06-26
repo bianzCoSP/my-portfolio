@@ -1,21 +1,27 @@
 import type { Metadata } from "next";
 import ProjectPage from "@/components/project-page";
 
-export const metadata: Metadata = {
-	// TODO: this should read from project slug
-	title: "Project name",
-	description: "Project info here!",
-	openGraph: {
-		title: "About Me",
-		description: "Project blurb here!",
-		// images: "",
-	},
+type Props = {
+	params: Promise<{ projectId: string }>;
 };
 
-export default async function Home() {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+	const { projectId } = await params;
+
+	return {
+		title: `Project: ${projectId}`,
+		description: `Project info for ${projectId}!`,
+		openGraph: {
+			title: `About ${projectId}`,
+			description: `Project blurb for ${projectId}!`,
+		},
+	};
+}
+
+export default async function Home({ params }: Props) {
 	return (
 		<div>
-			<ProjectPage />
+			<ProjectPage params={params} />
 		</div>
 	);
 }
