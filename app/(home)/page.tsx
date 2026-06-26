@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 // hello from bianz!
 
-export default function Home() {
+export default function Page() {
 	return (
 		<div>
 			<HeroSection />

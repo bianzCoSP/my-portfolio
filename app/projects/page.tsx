@@ -11,8 +11,7 @@ export const metadata: Metadata = {
 	},
 };
 
-export default function Home() {
-	// throw new Error("Throwing test error");
+export default function Page() {
 	return (
 		<div>
 			<ProjectCard />
