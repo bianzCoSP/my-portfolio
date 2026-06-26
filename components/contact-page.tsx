@@ -1,11 +1,19 @@
+"use client";
+
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { useActionState } from "react";
+import { type EmailFormState, sendEmailAction } from "@/actions/sendemail";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { SubmitButton } from "./submit-button";
+
+const initialState: EmailFormState = null;
 
 export default function ContactPage() {
+	const [state, formAction] = useActionState(sendEmailAction, initialState);
+
 	return (
 		<section className="bg-background @container py-24">
 			<div className="mx-auto max-w-3xl px-6">
@@ -14,8 +22,8 @@ export default function ContactPage() {
 						Get in Touch
 					</h1>
 					<p className="text-muted-foreground mt-4 max-w-md text-balance">
-						Have questions? We'd love to hear from you. Send us a message and
-						we'll respond as soon as possible.
+						Want to work together? Send a message and I'll respond as soon as
+						possible.
 					</p>
 				</div>
 
@@ -44,13 +52,13 @@ export default function ContactPage() {
 						<div>
 							<p className="text-foreground text-sm font-medium">Office</p>
 							<p className="text-muted-foreground text-sm">
-								123 Main Street, San Francisco, CA 94102
+								Makati City, Metro Manila, Philippines
 							</p>
 						</div>
 					</div>
 
 					<Card variant="outline" className="@xl:col-span-3 p-6">
-						<form action="" className="space-y-5">
+						<form action={formAction} noValidate className="space-y-5">
 							<div className="@md:grid-cols-2 grid gap-4">
 								<div className="space-y-2">
 									<Label htmlFor="name" className="text-sm">
@@ -104,7 +112,9 @@ export default function ContactPage() {
 								/>
 							</div>
 
-							<Button className="w-full">Send Message</Button>
+							{state && <p>{state.message}</p>}
+
+							<SubmitButton />
 						</form>
 					</Card>
 				</div>
