@@ -7,7 +7,7 @@ import { Slack } from "@/components/ui/svgs/slack";
 import { Supabase } from "@/components/ui/svgs/supabase";
 import { Vercel } from "@/components/ui/svgs/vercel";
 
-export default function Features() {
+export default function ProjectCard() {
 	return (
 		<section className="bg-background @container py-24">
 			<div className="mx-auto max-w-2xl px-6">

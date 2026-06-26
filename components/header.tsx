@@ -2,7 +2,6 @@
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import React from "react";
-import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./toggle-theme";
@@ -41,9 +40,9 @@ export const HeroHeader = () => {
 							<Link
 								href="/"
 								aria-label="home"
-								className="flex items-center space-x-2"
+								className="text-xl font-bold tracking-tight text-foreground transition-colors hover:opacity-90"
 							>
-								<Logo />
+								Bianz.Co
 							</Link>
 
 							<button

@@ -27,7 +27,7 @@ export default function Contact() {
 								href="mailto:hello@example.com"
 								className="text-muted-foreground hover:text-primary text-sm"
 							>
-								hello@example.com
+								cobjkenrick@gmail.com
 							</Link>
 						</div>
 
@@ -37,7 +37,7 @@ export default function Contact() {
 								href="tel:+1234567890"
 								className="text-muted-foreground hover:text-primary text-sm"
 							>
-								+1 (234) 567-890
+								+63-917-716-0010
 							</Link>
 						</div>
 
@@ -86,7 +86,7 @@ export default function Contact() {
 									type="text"
 									id="subject"
 									name="subject"
-									placeholder="How can we help?"
+									placeholder="What can we build together?"
 								/>
 							</div>
 
@@ -98,7 +98,7 @@ export default function Contact() {
 									id="message"
 									name="message"
 									rows={4}
-									placeholder="Tell us more..."
+									placeholder="Details here..."
 									required
 									className="min-h-28"
 								/>

@@ -25,7 +25,6 @@ export default function ContentSection() {
 							Saepe deleniti perferendis beatae.
 						</p>
 
-						{/* Fixed Button implementation using asChild */}
 						<Button
 							variant="secondary"
 							size="sm"
