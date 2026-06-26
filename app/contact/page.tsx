@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import Contact from "@/components/contact-page";
+import ContactPage from "@/components/contact-page";
 
 export const metadata: Metadata = {
 	title: "Contact",
-	description: "PORTFOLIO DESCRIPTION",
+	description: "Let's get in touch!",
 	openGraph: {
 		title: "Contact",
-		description: "PORTFOLIO DESCRIPTION",
+		description: "Let's get in touch!",
 		// images: "",
 	},
 };
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function Home() {
 	return (
 		<div>
-			<Contact />
+			<ContactPage />
 		</div>
 	);
 }

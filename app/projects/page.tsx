@@ -3,10 +3,10 @@ import ProjectCard from "@/components/project-card";
 
 export const metadata: Metadata = {
 	title: "Project Dashboard",
-	description: "PORTFOLIO DESCRIPTION",
+	description: "My previous work!",
 	openGraph: {
 		title: "Project Dashboard",
-		description: "PORTFOLIO DESCRIPTION",
+		description: "My previous work!",
 		// images: "",
 	},
 };

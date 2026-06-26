@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
-export default function Contact() {
+export default function ContactPage() {
 	return (
 		<section className="bg-background @container py-24">
 			<div className="mx-auto max-w-3xl px-6">

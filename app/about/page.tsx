@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import ContentSection from "@/components/about-page";
+import AboutPage from "@/components/about-page";
 
 export const metadata: Metadata = {
 	title: "About Me",
-	description: "PORTFOLIO DESCRIPTION",
+	description: "Info about me!",
 	openGraph: {
 		title: "About Me",
-		description: "PORTFOLIO DESCRIPTION",
+		description: "Info about me!",
 		// images: "",
 	},
 };
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default async function Home() {
 	return (
 		<div>
-			<ContentSection />
+			<AboutPage />
 		</div>
 	);
 }
