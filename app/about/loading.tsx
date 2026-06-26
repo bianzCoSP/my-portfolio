@@ -1,7 +1,9 @@
+import AboutSkeleton from "@/components/about-skeleton";
+
 export default function Home() {
 	return (
 		<div>
-			<h1>LOADING LOADING LOADING</h1>
+			<AboutSkeleton />
 		</div>
 	);
 }
