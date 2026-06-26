@@ -1,4 +1,5 @@
 import { Shield } from "lucide-react";
+import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { ClerkIconDark as Clerk } from "@/components/ui/svgs/clerk";
 import { Firebase } from "@/components/ui/svgs/firebase";
@@ -21,7 +22,15 @@ export default function ProjectCard() {
 					</p>
 				</div>
 				<div className="@xl:grid-cols-2 mt-12 grid gap-3 *:p-6">
-					<Card variant="outline" className="row-span-2 grid grid-rows-subgrid">
+					<Card
+						variant="outline"
+						className="row-span-2 relative grid grid-rows-subgrid transition-colors hover:bg-muted/50"
+					>
+						<Link
+							href="/"
+							className="absolute inset-0 z-10"
+							aria-label="Seamless Integrations"
+						/>
 						<div className="space-y-2">
 							<h3 className="text-foreground font-medium">
 								Seamless Integrations
@@ -68,8 +77,13 @@ export default function ProjectCard() {
 					</Card>
 					<Card
 						variant="outline"
-						className="row-span-2 grid grid-rows-subgrid overflow-hidden"
+						className="row-span-2 relative grid grid-rows-subgrid overflow-hidden transition-colors hover:bg-muted/50"
 					>
+						<Link
+							href="/"
+							className="absolute inset-0 z-10"
+							aria-label="Real-time Sync"
+						/>
 						<div className="space-y-2">
 							<h3 className="text-foreground font-medium">Real-time Sync</h3>
 							<p className="text-muted-foreground text-sm">
@@ -86,8 +100,13 @@ export default function ProjectCard() {
 					</Card>
 					<Card
 						variant="outline"
-						className="row-span-2 grid grid-rows-subgrid overflow-hidden"
+						className="row-span-2 relative grid grid-rows-subgrid overflow-hidden transition-colors hover:bg-muted/50"
 					>
+						<Link
+							href="/"
+							className="absolute inset-0 z-10"
+							aria-label="Developer First"
+						/>
 						<div className="space-y-2">
 							<h3 className="text-foreground font-medium">Developer First</h3>
 							<p className="text-muted-foreground mt-2 text-sm">
@@ -133,7 +152,15 @@ export default function ProjectCard() {
 							<div className="bg-primary!"></div>
 						</div>
 					</Card>
-					<Card variant="outline" className="row-span-2 grid grid-rows-subgrid">
+					<Card
+						variant="outline"
+						className="row-span-2 relative grid grid-rows-subgrid transition-colors hover:bg-muted/50"
+					>
+						<Link
+							href="/"
+							className="absolute inset-0 z-10"
+							aria-label="Enterprise Ready"
+						/>
 						<div className="space-y-2">
 							<h3 className="font-medium">Enterprise Ready</h3>
 							<p className="text-muted-foreground text-sm">
