@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { ThemeToggle } from "./toggle-theme";
+import { ThemeToggle } from "./theme-toggle";
 
 const menuItems = [
 	{ name: "About", href: "/about" },

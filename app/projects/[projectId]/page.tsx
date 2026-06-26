@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	};
 }
 
-export default async function Home({ params }: Props) {
+export default async function Page({ params }: Props) {
 	return (
 		<div>
 			<ProjectPage params={params} />
