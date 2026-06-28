@@ -1,20 +1,24 @@
+import { promises as fs } from "node:fs";
+
 export interface Project {
+	id: string;
 	title: string;
-	imageUrl: string;
 	description: string;
 }
 
-const ProjectData: Record<string, Project> = {
-	"hygiene-buddy": {
-		title: "Hygiene Buddy: A project",
-		imageUrl: "/images/projects/placeholder.png",
-		description: "kalsdjfl ajsf oiwh lkajsldfjoqwjlekajsdlfkj lajks",
-	},
-};
+async function getProjectData(): Promise<Record<string, Project>> {
+	const raw = await fs.readFile(`${process.cwd()}/lib/projects.json`, "utf8");
+	return JSON.parse(raw);
+}
 
 export async function getProjectById(
 	projectId: string,
 ): Promise<Project | null> {
-	const project = ProjectData[projectId];
-	return project || null;
+	const data = await getProjectData();
+	return data[projectId] ?? null;
+}
+
+export async function getAllProjects(): Promise<Project[]> {
+	const data = await getProjectData();
+	return Object.values(data);
 }

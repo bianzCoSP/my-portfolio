@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ProjectCard from "@/components/project-card";
+import ProjectCardPage from "@/components/project-card-page";
 
 export const metadata: Metadata = {
 	title: "Project Dashboard",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function Page() {
 	return (
 		<div>
-			<ProjectCard />
+			<ProjectCardPage />
 		</div>
 	);
 }

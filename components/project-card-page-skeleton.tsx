@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 
-export default function ProjectCardSkeleton() {
+export default function ProjectCardPageSkeleton() {
 	return (
 		<section className="bg-background @container py-24">
 			<div className="mx-auto max-w-2xl px-6">
