@@ -30,7 +30,6 @@ export const metadata: Metadata = {
 			default: "Bianz's Portfolio",
 		},
 		description: "PORTFOLIO DESCRIPTION",
-		// images: "",
 	},
 };
 
