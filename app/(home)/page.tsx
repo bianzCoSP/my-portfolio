@@ -7,7 +7,6 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: "Home | Bianz's Portfolio",
 		description: "PORTFOLIO DESCRIPTION",
-		// images: "",
 	},
 };
 

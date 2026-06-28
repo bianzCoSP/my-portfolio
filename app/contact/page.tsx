@@ -7,7 +7,6 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: "Contact",
 		description: "Let's get in touch!",
-		// images: "",
 	},
 };
 

@@ -22,8 +22,6 @@ export default function AboutSkeleton() {
 							<Skeleton className="h-4 w-full" />
 							<Skeleton className="h-4 w-2/3" />
 						</div>
-
-						<Skeleton className="h-9 w-28 rounded-md" />
 					</div>
 				</div>
 			</div>
