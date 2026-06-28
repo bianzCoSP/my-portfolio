@@ -40,7 +40,7 @@ export const HeroHeader = () => {
 							<Link
 								href="/"
 								aria-label="home"
-								className="text-xl font-bold tracking-tight text-foreground transition-colors hover:opacity-90"
+								className="text-xl font-bold tracking-tight text-brand transition-colors hover:opacity-90"
 							>
 								Bianz.Co
 							</Link>
