@@ -1,9 +1,9 @@
-import AboutSkeleton from "@/components/about-skeleton";
+import AboutPageSkeleton from "@/components/about-page-skeleton";
 
 export default function Loading() {
 	return (
 		<div>
-			<AboutSkeleton />
+			<AboutPageSkeleton />
 		</div>
 	);
 }

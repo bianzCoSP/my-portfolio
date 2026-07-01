@@ -1,6 +1,6 @@
 import { Skeleton } from "@/components/ui/skeleton";
 
-export default function AboutSkeleton() {
+export default function AboutPageSkeleton() {
 	return (
 		<section className="py-16 md:py-32">
 			<div className="mx-auto max-w-5xl px-6">
@@ -22,6 +22,8 @@ export default function AboutSkeleton() {
 							<Skeleton className="h-4 w-full" />
 							<Skeleton className="h-4 w-2/3" />
 						</div>
+
+						<Skeleton className="h-9 w-28 rounded-md" />
 					</div>
 				</div>
 			</div>
