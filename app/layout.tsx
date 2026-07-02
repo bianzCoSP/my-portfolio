@@ -40,7 +40,7 @@ export default function RootLayout({
 			<body className="min-h-full flex flex-col bg-background text-foreground">
 				<ThemeProvider attribute="class" enableSystem defaultTheme="system">
 					<Header />
-					<main className="flex-1 flex-col">{children}</main>
+					<main className="flex flex-1 flex-col">{children}</main>
 				</ThemeProvider>
 			</body>
 		</html>
