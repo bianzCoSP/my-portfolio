@@ -33,7 +33,7 @@ export default function ContactPage() {
 						<div className="flex gap-2">
 							<span className="text-core shrink-0">--email</span>
 							<Link
-								href="mailto:hello@example.com"
+								href="mailto:cobjkenrick@gmail.com"
 								className="text-muted-foreground hover:text-core break-all"
 							>
 								cobjkenrick@gmail.com
@@ -43,7 +43,7 @@ export default function ContactPage() {
 						<div className="flex gap-2">
 							<span className="text-core shrink-0">--phone</span>
 							<Link
-								href="tel:+1234567890"
+								href="tel:+639177160010"
 								className="text-muted-foreground hover:text-core"
 							>
 								+63-917-716-0010
