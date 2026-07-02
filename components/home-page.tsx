@@ -18,7 +18,7 @@ const cmds = [
 	"gh pr merge --squash",
 ];
 
-export default function HeroSection() {
+export default function HomePage() {
 	return (
 		<main className="overflow-hidden">
 			<section className="bg-background relative">
