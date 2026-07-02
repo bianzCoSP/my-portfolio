@@ -60,7 +60,7 @@ export default function ContactPage() {
 
 					<Card variant="terminal" className="@xl:col-span-3">
 						<CardTitlebar filename="~/contact/new-message.sh" />
-						<form action={formAction} noValidate className="space-y-5 p-6">
+						<form action={formAction} className="space-y-5 p-6">
 							<div className="@md:grid-cols-2 grid gap-4">
 								<div className="space-y-2">
 									<Label htmlFor="name" className="font-mono text-sm">
