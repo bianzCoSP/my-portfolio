@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import HomePage from "@/components/home-page";
 
 export const metadata: Metadata = {
-	title: "Home | Bianz's Portfolio",
+	title: "Home",
 	description: "PORTFOLIO DESCRIPTION",
 	openGraph: {
-		title: "Home | Bianz's Portfolio",
+		title: "Home",
 		description: "PORTFOLIO DESCRIPTION",
 	},
 };
