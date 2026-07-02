@@ -3,7 +3,7 @@ import "./globals.css";
 
 import { JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
-import { HeroHeader } from "@/components/header";
+import { Header } from "@/components/header";
 import { cn } from "@/lib/utils";
 
 const jetbrainsMono = JetBrains_Mono({
@@ -39,7 +39,7 @@ export default function RootLayout({
 		>
 			<body className="min-h-full flex flex-col bg-background text-foreground">
 				<ThemeProvider attribute="class" enableSystem defaultTheme="system">
-					<HeroHeader />
+					<Header />
 					<main className="flex-1 flex-col">{children}</main>
 				</ThemeProvider>
 			</body>
