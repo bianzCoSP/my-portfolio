@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Repository
+This is the repository for Software Engineering Training Weeks 1-2 Portfolio Project
 
 ## Getting Started
-
-First, run the development server:
-
+### Running Locally
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Local page is hosted at [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Stack
+- Next.js 16
+- React 19
+- Tailwind v4
+- ShadCN
+- Next-themes
+- Nodemailer
+- Biome
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## MVP Requirements
+1. Home Page: Server component, has metadata (title, description, openGraph).
+2. About me Page: Shared layout.tsx with header + nav, has loading.tsx skeleton.
+3. Projects list: Async Server Component. Reads from JSON. Renders Project Card.
+4. Individual Project Page: Dynamic route with await params to get slug. Calls notFound() on invalid slug.
+5. Contact form: Client Component using useActionState() + Server Action. Submit button uses useFormStatus(). Shows success/error state. Email sent with nodemailer.
+6. error.tsx: "use client" boundary. Message + Reset to home button.
+7. loading.tsx: Skeleton UI with ShadCN component.
+8. All images via next/image: No raw <img> tags. All images have alt, width, and height.
+9. Tailwind v4 @theme token: At least one custom --color-* token in globals.css, used in a component.
+10. Deployed to Vercel: Live public URL. Auto-deploys on push to main.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Stretch Goals
+- Blog/Writing Section: Reads MDX or JSON per post. Dynamic routes.
+- Dark Mode Toggle: Tailwind v4 dark: variant. State via localStorage or system preference.
+- Page Transitions: CSS @starting-style or Framer-motion
