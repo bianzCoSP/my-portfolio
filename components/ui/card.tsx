@@ -10,6 +10,8 @@ const cardVariants = cva("text-card-foreground rounded-2xl", {
 			soft: "bg-muted",
 			mixed: "bg-muted border",
 			outline: "bg-card ring-1 ring-border",
+			terminal:
+				"bg-card ring-1 ring-border overflow-hidden shadow-lg shadow-black/10",
 		},
 	},
 	defaultVariants: {
@@ -31,6 +33,23 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
 	),
 );
 Card.displayName = "Card";
+
+const CardTitlebar = React.forwardRef<
+	HTMLDivElement,
+	React.HTMLAttributes<HTMLDivElement> & { filename?: string }
+>(({ className, filename, children, ...props }, ref) => (
+	<div ref={ref} className={cn("terminal-titlebar", className)} {...props}>
+		<span className="terminal-dot bg-nord-red" />
+		<span className="terminal-dot bg-nord-yellow" />
+		<span className="terminal-dot bg-nord-green" />
+		{(filename || children) && (
+			<span className="text-muted-foreground ml-2 truncate text-xs">
+				{filename ?? children}
+			</span>
+		)}
+	</div>
+));
+CardTitlebar.displayName = "CardTitlebar";
 
 const CardHeader = React.forwardRef<
 	HTMLDivElement,
@@ -95,4 +114,5 @@ export {
 	CardFooter,
 	CardHeader,
 	CardTitle,
+	CardTitlebar,
 };

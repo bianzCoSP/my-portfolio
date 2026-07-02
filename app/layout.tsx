@@ -1,20 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+import { JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
-
 import { HeroHeader } from "@/components/header";
-
 import { cn } from "@/lib/utils";
 
-const geistSans = Geist({
-	variable: "--font-geist-sans",
-	subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-	variable: "--font-geist-mono",
+const jetbrainsMono = JetBrains_Mono({
+	variable: "--font-mono-terminal",
 	subsets: ["latin"],
 });
 
@@ -42,14 +35,9 @@ export default function RootLayout({
 		<html
 			suppressHydrationWarning
 			lang="en"
-			className={cn(
-				"h-full",
-				"antialiased",
-				geistSans.variable,
-				geistMono.variable,
-			)}
+			className={cn("h-full", "antialiased", jetbrainsMono.variable)}
 		>
-			<body className="min-h-full flex flex-col bg-background text-foreground font-(family-name:--font-geist-sans)">
+			<body className="min-h-full flex flex-col bg-background text-foreground">
 				<ThemeProvider attribute="class" enableSystem defaultTheme="system">
 					<HeroHeader />
 					<main className="flex-1 flex-col">{children}</main>

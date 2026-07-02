@@ -7,9 +7,9 @@ import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./theme-toggle";
 
 const menuItems = [
-	{ name: "About", href: "/about" },
-	{ name: "Projects", href: "/projects" },
-	{ name: "Contact", href: "/contact" },
+	{ name: "about", href: "/about" },
+	{ name: "projects", href: "/projects" },
+	{ name: "contact", href: "/contact" },
 ];
 
 export const HeroHeader = () => {
@@ -29,9 +29,9 @@ export const HeroHeader = () => {
 			<nav
 				data-state={menuState && "active"}
 				className={cn(
-					"z-20 w-full transition-all duration-300",
+					"z-20 w-full font-mono transition-all duration-300",
 					isScrolled &&
-						"bg-background/75 border-b border-black/5 backdrop-blur-lg",
+						"bg-background/85 border-b border-border backdrop-blur-lg",
 				)}
 			>
 				<div className="mx-auto max-w-5xl px-6">
@@ -40,9 +40,13 @@ export const HeroHeader = () => {
 							<Link
 								href="/"
 								aria-label="home"
-								className="text-xl font-bold tracking-tight text-brand transition-colors hover:opacity-90"
+								className="text-core flex items-baseline text-base font-semibold tracking-tight transition-opacity hover:opacity-80"
 							>
-								Bianz.Co
+								<span className="text-muted-foreground">bianz</span>
+								<span className="text-foreground/50">@</span>
+								<span>co</span>
+								<span className="text-foreground/50">:~$</span>
+								<span className="terminal-cursor" />
 							</Link>
 
 							<button
@@ -61,7 +65,8 @@ export const HeroHeader = () => {
 								{menuItems.map((item) => (
 									<li key={item.name}>
 										<Button variant="ghost" size="sm" asChild>
-											<Link href={item.href} className="text-base">
+											<Link href={item.href} className="text-sm">
+												<span className="text-core/70">./</span>
 												<span>{item.name}</span>
 											</Link>
 										</Button>
@@ -70,15 +75,16 @@ export const HeroHeader = () => {
 							</ul>
 						</div>
 
-						<div className="bg-background in-data-[state=active]:block lg:in-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
+						<div className="bg-card in-data-[state=active]:block lg:in-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-2xl border border-border p-6 shadow-2xl shadow-black/10 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
 							<div className="lg:hidden">
-								<ul className="space-y-6 text-base">
+								<ul className="space-y-6 text-sm">
 									{menuItems.map((item) => (
 										<li key={item.name}>
 											<Link
 												href={item.href}
-												className="text-muted-foreground hover:text-accent-foreground block duration-150"
+												className="text-muted-foreground hover:text-core block duration-150"
 											>
+												<span className="text-core/70">./</span>
 												<span>{item.name}</span>
 											</Link>
 										</li>
